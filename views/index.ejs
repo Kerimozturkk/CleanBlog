@@ -30,12 +30,12 @@
               <%= posts[i].title %>
             </h2>
             <h3 class="post-subtitle">
-              <%= posts[i].title %>
+              <%= posts[i].detail.slice(0,20) %>...
             </h3>
           </a>
           <p class="post-meta">Posted by
             <a href="#">Kerim Öztürk</a>
-            <%= posts[i].dateCreated %></p>
+            <%= moment(posts[i].dateCreated).format("DD.MM.YYYY hh:mm:ss") %></p>
         </div>
         <hr>
         <% } %>
